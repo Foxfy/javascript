@@ -1,0 +1,41 @@
+*{
+    background-color: #373737;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: whitesmoke;
+    width: 350px;
+}
+p{
+    font: 100px bold;
+    margin: 50px;
+}
+button{
+    border: 1px solid skyblue;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: skyblue;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+td{
+    font-size: 30px;
+}
+table {
+    margin: 0 auto;
+}
+td.left {
+    text-align: left;
+}
+td.right {
+    text-align: right;
+}
