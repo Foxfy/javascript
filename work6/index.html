@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="key">
+    <button onclick="Click()">ค้นหา</button>
+
+    <p id="text">
+        รู้สึกยังไงเก็บเอาไว้ไม่เคยคิดจะบอก<br>
+        เอ่ยปากตรงตรงคงไม่ไหวหัวใจมันฝ่อ<br>
+        รักมากเพียงใดจดเอาไว้ให้เป็นเพลง<br>
+        บอกกับตัวเองเผื่อเธอได้ยินเพลงของฉัน<br>
+        มันคงจะดีถ้าวันไหนที่เธอฟัง<br>
+        ที่เก็บมานานให้เพลงบอกความลับของใจ<br>
+        แต่กลัวมันจะเป็นเพลงรักที่เธอแค่ฟังผ่าน<br>
+        เป็นอีกเพลงหวานหวานไม่โดนใจไร้ความหมาย<br>
+        ท่วงทำนองจะร้อยถ้อยคำไว้สวยงามสักเท่าไร<br>
+        จะดีอย่างไรถ้าเธอไม่สนใจฟัง<br>
+        ที่แต่งทำนองบอกว่ารักตั้งใจให้ฟังออก<br>
+        รู้สึกยังไงมากแค่ไหนใช้เพลงไปบอก<br>
+        ทั้งหมดในใจเก็บมาเขียนให้เป็นเพลง<br>
+        อยากจะบรรเลงข้อความข้างในหัวใจฉัน<br>
+        วันนึงถ้าได้ร้องให้เธอฟัง<br>
+        ที่เก็บมานานให้เพลงบอกแทนรักข้างใน<br>
+        แต่กลัวมันจะเป็นเพลงรักที่เธอแค่ฟังผ่าน<br>
+        เป็นอีกเพลงหวานหวานไม่โดนใจไร้ความหมาย<br>
+        ท่วงทำนองจะร้อยถ้อยคำไว้สวยงามสักเท่าไร<br>
+        จะดีอย่างไรถ้าเธอไม่สนใจฟัง<br>
+        แต่มันบังเอิญเพลงนี้ฉันไม่ได้ฟังผ่าน<br>
+        ทุกข้อความหวานหวานล้วนมีความหมาย<br>
+        เป็นทำนองเรียงร้อยถ้อยคำที่สวยงามและจับใจ<br>
+        เพลงของเธอฉันตั้งใจฟัง<br>
+        กลัวมันจะเป็นเพียงรักที่เธอนั้นมองผ่าน<br>
+        แต่มันเป็นเพลงหวานหวานที่มีความหมาย<br>
+        กลัวเธอจะไม่ซึ้งถึงข้อความแม้สวยงามสักเท่าไร<br>
+        เพลงของเธอต้องตั้งใจฟัง<br>
+
+    </p>
+
+    <script>
+        // เปลี่ยนข้อความ
+        // let text = document.getElementById('text').innerHTML;
+        // let newtext = text.replaceAll("ฟัง","T_Tไม่ฟังโว้ย");
+        // document.getElementById('text').innerHTML = newtext;
+
+        function Click() {
+            let text = document.getElementById('text').innerHTML;
+            let key = document.getElementById('key').value;
+
+            console.log(key);
+
+            let newtext = text.replaceAll(key, '<span style="background-color: #FF0F00">' + key + '</span>');
+            document.getElementById('text').innerHTML = newtext;
+        }
+
+    </script>
+
+</body>
+
+</html>

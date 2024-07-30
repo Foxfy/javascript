@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            /* จัดเนื้อหากลางจอ */
+            margin: 0 auto;     
+            padding: 20px;
+        }
+
+        .big{
+            border: 1px solid #DDD;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+
+            & img{
+                width: 100%;
+            }
+        }
+        /* กล่องใส่รูปจิ๋วด้านล่าง */
+        .thumbnail{
+            border: 1px solid #DDD;
+        }
+        /* รูปจิ๋ว */
+        .thumbnail img{
+            width: 155px;
+            height: 155px;
+            /* ทำให้รูปไม่ยืด */
+            object-fit: cover;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button id="ok" onclick="change()" onmouseover="mouseIn()" onmouseleave="mouseOut()">ปุ่มมมมมม</button> -->
+    <!-- <button id="ok">ปุ่มมมมมม</button> -->
+
+    <div class="container">
+        <div class="big">
+            <img src="./images/test.png" alt="" id="big">
+        </div>
+        <div class="thumbnail">
+            <img src="./images/6.jpg" alt="" onclick="showImage()">
+            <img src="./images/7.jpg" alt="" onclick="showImage()">
+            <img src="./images/8.jpg" alt="" onclick="showImage()">
+        </div>
+    </div>
+
+    <script>
+        // let button = document.getElementById('ok');
+
+        // function change(){
+        //     button.innerHTML = "แมววววว";
+        // }
+
+        // function mouseIn(){
+        //     button.innerHTML = "ช่วยด้วยย";
+        // }
+
+        // function mouseOut(){
+        //     button.innerHTML = "ไม่ต้องช่วยละ";
+        // }
+
+        // button.addEventListener("click" , change); // เมื่อคลิก ทำงานฟังก์ชั่น change
+        // button.addEventListener("mouseover" , mouseIn); // เมื่อคลิก ทำงานฟังก์ชั่น mouseIn
+        // button.addEventListener("mouseleave" , mouseOut); // เมื่อคลิก ทำงานฟังก์ชั่น mouseOut
+
+        let big = document.getElementById('big');
+        let thumb = document.querySelectorAll('.thumbnail img');
+        
+        // ฟังก์ชั่นนี้เรียกใช้ตาม event click ด้านล่าง
+        // คำว่า event คือ รับค่าที่มาจากการ วนลูป
+        function showImage(event){
+            let clicked = event.target; // คือตัวที่เราคลิก (เพราะevent เป็นการคลิก)
+            big.src = clicked.src;
+        }
+        // วนตามจำนวนรูป แต่ละรูปจะเก็บ ชื่อตัวแปรชื่อ myPicture
+        thumb.forEach(myPicture => {
+            myPicture.addEventListener('click' , showImage);
+        })
+    </script>
+</body>
+</html>

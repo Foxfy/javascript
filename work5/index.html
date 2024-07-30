@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopCat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hpop">
+        <h1>POPCAT</h1>
+    </header>
+    <div class="mpop">
+        <img src="images/am1.png" alt="cat" id="cat" onclick="Click()">
+    </div>
+    <div class="fpop">
+        <p id="number">0ครั้ง</p>
+    </div>
+
+
+    <script>
+        var img = document.getElementById('cat');  //ตัวแปรเก็บรูป
+        var number = document.getElementById('number'); //ตัวแปรเก็บข้อความแสดงจำนวนกด
+
+        let num2 = 0; //ตัวแปรเก็บจำนวนกด
+
+        function Click() {
+            num2++; //เพิ่มค่าเวลากด อัพเดทค่าที่ละ 1
+            
+            number.innerHTML = num2+" ครั้ง" // เปลี่ยนข้อความ
+            cat.src = "images/am2.png"; // เปลี่ยนรูป
+            cat.style.width = "510px" // ขนาดรูปภาพตอนเปลี่ยน
+
+            // (function(){}, 1000) ทำงาน 1 วิ
+            setTimeout(function(){
+                cat.src = "images/am1.png"; //เปลี่ยนรูปกลับ
+                cat.style.width = "500px"; //ขนาดรูปตอนเปลี่ยนกลับ
+            },1000);
+        }
+    </script>
+</body>
+</html>

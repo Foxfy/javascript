@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="slider">
+        <img src="images/1.jpg" alt="">
+        <img src="images/2.jpg" alt="">
+        <img src="images/3.jpg" alt="">
+        <img src="images/4.jpg" alt="">
+        <img src="images/5.jpg" alt="">
+        
+        <a class="button" style="left: 0;" onclick="sliderClick('L')"> < </a>
+        <a class="button" style="right: 0;" onclick="sliderClick('R')"> > </a>
+    </div>
+
+
+    <script>
+        var picture = document.querySelectorAll('.slider img'); // เลือกรูปภาพที่อยู่ใน .slider
+        var a = picture.length - 1; // เลือกว่ารูปไหนกำลังแสดงอยู่
+
+        function sliderClick(direction){
+            if(direction == 'L'){
+                a--;
+                a = picture.length - 1;
+            }else if(direction == 'R'){
+                a++;
+                if(a>=picture.length){
+                a = 0;
+                }
+            }
+            changeImage();
+        }
+
+        function changeImage(){
+            for(x = 0; x < picture.length; x++){
+                // วนลูปตั้งแต่ 0 จนถึงจำนวนรูปภาพทั้งหมด (picture.length)
+                if(x == a){
+                    picture[x].style.opacity = 1;
+                }else{
+                    picture[x].style.opacity = 0;
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light switch</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .light-on{
+            background-color: green;
+        }
+    </style>
+</head>
+<body id="light">
+    <button id="sw">เปิดไฟ</button>
+
+
+    <script>
+        let sw = document.getElementById('sw');
+        let light = document.querySelector('body');
+
+        let status = false; // เก็บสถานนะเปิดปิดไฟ
+
+        sw.addEventListener('click' , function(){
+            // if(status){
+            //     light.classList.remove('light-on');
+            //     sw.innerHTML = "เปิดไฟ";
+            //     status = false;
+            // }else{
+            //     light.classList.add('light-on'); // เพิ่มคลาสชื่อ light-on
+            //     sw.innerHTML = "ปิดไฟ";
+            //     status = true;
+            // }
+
+            light.classList.toggle('light-on');
+        });
+    </script>
+</body>
+</html>

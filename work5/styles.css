@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+.hpop{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.mpop{
+    text-align: center;
+}
+
+.mpop>img{
+    width: 500px;
+}
+
+.fpop{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
