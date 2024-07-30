@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box_ham{
+            position: absolute;
+            z-index: -1;
+        }
+        .hamter{
+            padding: 8px;
+            font-size: 2rem;
+            font-weight: 1000;
+            color: white;
+            background-color: orange;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .drop_down{
+            position: absolute;
+            left: -500px ;
+            width: 300px;
+            height: 100vh;
+            background-color: rgb(233, 233, 233);
+            
+            .xham{
+            padding: 8px;
+            font-size: 2rem;
+            font-weight: 600;
+            color: orange;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            }
+
+            ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                line-height: 70px;
+                font-size: 2rem;
+
+                li{
+                    a{
+                        color: orange;
+                    }
+                }
+            }
+            .text-center{
+                display: flex;
+                justify-content: center;
+                margin-top: 10vw;
+            }
+            .img_panda{
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box_ham">
+        <button class="hamter" onclick="hamClick('open')">&#9776</button>
+    </div>
+    
+    <div class="drop_down">
+        <div class="btn_close">
+            <button class="xham" onclick="hamClick('close')">X</button>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <span class="text-center">นายสหพร สาลี SIT.2/1 เลขที่ 7</span>
+        <img src="8.jpg" alt="" class="img_panda">
+    </div>
+
+    <script>
+        var boxHam = document.querySelector('.drop_down');
+
+        function hamClick(valueP){
+            if(valueP == 'open'){
+                boxHam.style.left = 0;
+            }
+            if(valueP == 'close'){
+                text = "-500px";
+                boxHam.style.left = text;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User ID</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- นายสหพร สาลี เลขที่ 7 SIT.2/1 -->
+</head>
+<body>
+    <div>
+        <h2 class="title">YOUR ID IS</h2>
+        <p id="number" name="number">0000</p>
+        <button onclick="generateID()"> GENERATE </button>
+
+        <hr>
+
+        <table width="50%">
+            <tr>
+                <td id="g1" width="50%" class="left">A</td>
+                <td id="n1" width="50%" class="right">0</td>
+            </tr>
+            <tr>
+                <td id="g2" width="50%" class="left">B</td>
+                <td id="n2" width="50%" class="right">0</td>
+            </tr>
+            <tr>
+                <td id="g3" width="50%" class="left">C</td>
+                <td id="n3" width="50%" class="right">0</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        //นายสหพร สาลี เลขที่ 7 SIT.2/1
+        
+        let a = 0;
+        let b = 0;
+        let c = 0;
+        // let text = document.getElementById('number').innerHTML;
+        function generateID() {
+            let number = Math.floor(Math.random() * 1000);
+            if(number <= 399){
+                if(number <= 9){
+                    document.getElementById('number').innerHTML = "A"+"00"+number;
+                }
+                else if(number <= 99){
+                    document.getElementById('number').innerHTML = "A"+"0"+number;
+                }else{
+                    document.getElementById('number').innerHTML = "A"+number;
+                }
+                a++;
+                document.getElementById('n1').innerHTML = a;
+            }
+            else if(number <= 799){
+                document.getElementById('number').innerHTML = "B"+number;
+                b++;
+                document.getElementById('n2').innerHTML = b;
+            }else{
+                document.getElementById('number').innerHTML = "C"+number;
+                c++;
+                document.getElementById('n3').innerHTML = c;
+            }
+
+
+        }
+    </script>
+</body>
+</html>
